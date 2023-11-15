@@ -10,7 +10,8 @@ const CheckBox = ({ name, label, ...rest }) => {
         // <input type="checkbox" {...field} {...rest} />
         // <Checkbox checked={gilad} onChange={handleChange} name="gilad" />
         // <label>{label}</label>
-        <div className="form-control">
+        // <div className="form-control">
+        <>
             <Field name={name}>
                 {({ field, form, meta }) => {
                     return (
@@ -28,7 +29,7 @@ const CheckBox = ({ name, label, ...rest }) => {
                     );
                 }}
             </Field>
-        </div>
+        </>
     );
 };
 

@@ -93,8 +93,12 @@ const FormRegister = () => {
                     toastSuccess(data.data.status.message);
                     navigate('/*');
                 }
+                return data;
             })
-            .catch((err) => console.log(err));
+            .catch((error) => {
+                console.log(error);
+                toastError(error.response ? error.response.data : error.message);
+            });
     };
     return (
         <Formik
@@ -157,19 +161,7 @@ const FormRegister = () => {
                                     name="lastName"
                                 />
                             </Grid>
-                            {/* <Grid item xs={12}>
-                                <FormikControl
-                                    control="MuiInput"
-                                    sx={{
-                                        width: { xs: '100%', sm: '433px', lg: '433px' },
-                                        '& .MuiOutlinedInput-root': {
-                                            borderRadius: '10px',
-                                        },
-                                    }}
-                                    label="FPT Email"
-                                    name="emailFpt"
-                                />
-                            </Grid> */}
+
                             <Grid item xs={12}>
                                 <FormikControl
                                     control="MuiInput"

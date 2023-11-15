@@ -5,7 +5,7 @@ export const ValidationSchema = Yup.object({
     studentId: Yup.string()
         .required('Required')
         .matches(
-            /^(S|s|Q|q)[E|A|S|s|e|a]+([0-9]{6})$/,
+            /^(S|e|Q|q)[E|A|S|s|e|a]+([0-9]{6})$/,
             'Your roll number must match the following formats'
         ),
     personalMail: Yup.string()

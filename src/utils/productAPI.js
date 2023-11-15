@@ -27,10 +27,6 @@ export const postRegister = (form) => {
         }
     );
 };
-// export const getStudentAll = () => {
-//     const url = `/sheet`;
-//     return get(url, {}, {});
-// };
 
 export const getChallenge = () => {
     const url = `/api/challenges`;
